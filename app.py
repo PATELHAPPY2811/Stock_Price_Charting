@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from datetime import datetime, date
 
 # --- Config ---
-API_KEY = 'QwznCIMoAuFPf2M1chnINcXmd9TzGxAQ'  # consider using st.secrets for security
+API_KEY = 'QwznCIMoAuFPf2M1chnINcXmd9TzGxAQ' 
 
 # --- API Helpers ---
 def get_real_time_price(symbol: str):
