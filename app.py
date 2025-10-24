@@ -135,9 +135,9 @@ def main():
     # Inputs for two symbols
     col_syms = st.columns(2)
     with col_syms[0]:
-        symbol1 = st.text_input("Use Only Stock Symbol 1:", key="sym1")
+        symbol1 = st.text_input("Enter Only Stock Symbol 1:", key="sym1")
     with col_syms[1]:
-        symbol2 = st.text_input("Use Only Stock Symbol 2:", key="sym2")
+        symbol2 = st.text_input("Enter Only Stock Symbol 2:", key="sym2")
 
     # Interval choice (shared)
     interval_options = ["Real-time", "1 minute", "5 minute", "15 minute", "30 minute", "1 hour"]
