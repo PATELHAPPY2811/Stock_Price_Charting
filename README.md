@@ -1,52 +1,152 @@
-Real-time Stock Price Dashboard with Streamlit and Polygon.io
 
-This project is a Streamlit application that empowers users to:
 
-Visualize Real-time Stock Prices: Get the latest stock price data and see how it changes throughout the day.
-Explore Historical Data: Look back in time and analyze stock price trends for a chosen date range.
-Interactive Candlestick Charts: Gain insights from visually appealing candlestick charts that depict the Open, High, Low, and Close prices for a stock over time.
-Key Features:
+# 📈 Real-time Two-Stock Price Dashboard with Streamlit and Polygon.io
 
-User-friendly interface for symbol input and time interval selection (real-time or historical)
-Seamless integration with Polygon.io's API to retrieve accurate stock data
-Powerful data processing with Pandas to prepare data for visualization
-Informative candlestick charts using Plotly.js for a clear view of price movements
-Comprehensive error handling for a robust user experience
-Getting Started
+This project is a **Streamlit web application** that allows users to visualize **real-time and historical stock price data** for **two different stocks at the same time**, using the **Polygon.io API**.
 
-Prerequisites: Ensure you have Python 3 and the following libraries installed:
-streamlit
-pandas
-requests
-plotly
-Clone the Repository: Use git clone https://github.com/your-username/stock-price-dashboard.git (Replace your-username with your actual GitHub username).
-API Key: Obtain a free API key from Polygon.io (https://polygon.io/) and replace 'YOUR_POLYGON_IO_API_KEY' with your key in stock_price_dashboard.py.
-Run the Application: Execute python stock_price_dashboard.py in your terminal.
-Usage
+---
 
-Launch the application in your web browser (usually http://localhost:8501).
-Enter a stock symbol (e.g., AAPL, GOOG) in the text input field.
-Select a time interval: Real-time, 1 minute, 5 minutes, 15 minutes, 30 minutes, or 1 hour.
-For real-time data, you'll see the most recent price.
-For historical data, choose a date range using the date pickers provided.
-The application will fetch and visualize the stock price data using a candlestick chart.
-Additional Notes
+## 🚀 Features
 
-Consider adding comments within your code to improve readability and maintainability.
-Explore advanced customization options offered by Streamlit and Plotly.js to personalize the user interface and charts.
-For real-time updates, investigate libraries like websockets to establish a persistent connection with Polygon.io's API.
-Deployment
+* **🔹 Compare Two Stocks Simultaneously:**
+  View two stock charts side-by-side in real time or over a chosen historical date range.
 
-While not covered in detail here, deploying this application online requires additional steps:
+* **📊 Interactive Candlestick Charts:**
+  Get deep insights from visually appealing candlestick charts showing **Open, High, Low, and Close** prices.
 
-Choose a hosting platform like Heroku or AWS.
-Securely store your API key using environment variables on the deployment platform.
-Contributing
+* **🕐 Real-time & Historical Modes:**
 
-We welcome contributions to this project! If you have any suggestions, enhancements, or bug fixes, feel free to create a pull request.
+  * Real-time mode shows the latest available price.
+  * Historical mode lets you explore data for custom date ranges.
 
-License
+* **⚙️ Polygon.io API Integration:**
+  Retrieves accurate and up-to-date market data for selected symbols.
 
-This project is licensed under the MIT License (see LICENSE file for details).
+* **📁 Powered by Pandas & Plotly:**
+  Smooth data processing with Pandas and rich visualizations via Plotly.
 
-Enjoy exploring and visualizing stock price data with this interactive Streamlit application!
+* **💪 Robust Error Handling:**
+  Detects invalid symbols, API errors, and connectivity issues gracefully.
+
+---
+
+## 🧰 Tech Stack
+
+* [Streamlit](https://streamlit.io/) — Interactive Python web app framework
+* [Polygon.io](https://polygon.io/) — Market data API
+* [Pandas](https://pandas.pydata.org/) — Data manipulation
+* [Plotly](https://plotly.com/python/) — Interactive charting
+
+---
+
+## ⚡ Getting Started
+
+### **1️⃣ Prerequisites**
+
+Ensure you have **Python 3.10+** and the following libraries installed:
+
+```bash
+pip install streamlit pandas requests plotly
+```
+
+---
+
+### **2️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/stock_price_charting.git
+cd stock_price_charting
+```
+
+*(Replace `your-username` with your GitHub handle.)*
+
+---
+
+### **3️⃣ Get Your API Key**
+
+* Sign up for a free account at [Polygon.io](https://polygon.io/).
+* Copy your **API key**.
+* Store it securely in `.streamlit/secrets.toml`:
+
+```toml
+POLYGON_API_KEY = "your_real_key_here"
+```
+
+> ⚠️ Do **not** hardcode your API key in the script.
+
+---
+
+### **4️⃣ Run the Application**
+
+```bash
+streamlit run app.py
+```
+
+Then open your browser at [http://localhost:8501](http://localhost:8501).
+
+---
+
+## 💻 Usage
+
+1. Enter **two stock symbols** (e.g., `AMD`, `NVDA`).
+2. Choose a **time interval**:
+
+   * `Real-time`, `1 minute`, `5 minute`, `15 minute`, `30 minute`, or `1 hour`
+3. If not in real-time mode, pick a **date range**.
+4. The app will:
+
+   * Fetch both datasets from Polygon.io
+   * Display **two interactive candlestick charts side-by-side**
+   * Provide summary information for each symbol
+
+---
+
+## 🌐 Deployment on Streamlit Cloud
+
+1. Push your project to GitHub.
+2. Visit [StockPriceChart](https://stockpricecharting-20072054.streamlit.app/).
+3. Connect your GitHub repo and deploy.
+4. Add your API key in **App → Settings → Secrets**:
+
+```
+POLYGON_API_KEY="your_real_key_here"
+```
+
+5. Hit **Deploy** — your app will go live instantly!
+
+---
+
+## 💡 Tips & Enhancements
+
+* Add in-code comments to improve readability.
+* Customize chart themes or layouts with Plotly.
+* Explore **websocket streaming** for live updates.
+* Integrate technical indicators like moving averages or Bollinger Bands.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+If you’d like to suggest improvements or fix bugs:
+
+1. Fork the repo
+2. Create a new branch (`feature/your-feature-name`)
+3. Commit your changes
+4. Submit a pull request 🚀
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+### ✨ Author
+
+**Happy Patel**
+💼 *Business Analyst*
+🌐 [LinkedIn](https://github.com/PATELHAPPY2811)
+
